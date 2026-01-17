@@ -86,7 +86,7 @@ export default {
                         </li>
                     </ul>
                     <h2>Records</h2>
-                    <p><strong>{{ (level.difficulty>3)?level.percentToQualify:100 }}%</strong> or better to qualify</p>
+                    <p><strong>{{ (level.difficulty>-1)?level.percentToQualify:100 }}%</strong> or better to qualify</p>
                     <table class="records">
                         <tr v-for="record in level.records" class="record">
                             <td class="percent">
