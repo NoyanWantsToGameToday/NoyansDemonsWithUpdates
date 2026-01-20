@@ -12,6 +12,14 @@
     "enjoyment": 10,
     "records": [
         {
+            "user": "Serwannoamk",
+            "link": "https://drive.google.com/file/d/1nY_S7UQMr3FmkWsaSduV5isYkUumacGo/view",
+            "percent": 100,
+            "hz": 180,
+            "mobile": false,
+            "enjoyment": 1
+        }
+        {
             "user": "Exence",
             "link": "https://www.youtube.com/watch?v=pZIQSxqqinc",
             "percent": 36,
