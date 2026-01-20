@@ -23,7 +23,9 @@
             "user": "Exence",
             "link": "https://www.youtube.com/watch?v=pZIQSxqqinc",
             "percent": 36,
-            "hz": 60
+            "hz": 60,
+            "mobile": false,
+            "enjoyment": 8
         }
     ]
 }
