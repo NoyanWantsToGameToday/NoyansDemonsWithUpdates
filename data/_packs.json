@@ -68,8 +68,9 @@
     },
     {
         "name": "Exence Pack",
-        "difficulty": 8,
+        "difficulty": 9,
         "levels": [
+            "KageyamaNeverClear",
             "Catastroveil",
             "HELLSDANCE",
             "Brupple",
