@@ -4,8 +4,17 @@
     "name": "Deluge",
     "thumbnail": "https://img.youtube.com/vi/VIDEO_ID/mqdefault.jpg",
     "video": "https://www.youtube.com/watch?v=CvGmOqijvlA&pp=ygUORGVsdWdlIFByZXdpZXc%3D",
-    "bestPercent": 47,
+    "bestPercent": 55,
     "verifiers": ["Noyan"],
     "creators": ["Noyan"]
+  },
+  {
+    "id": "turkishamethyst",
+    "name": "Diathyst",
+    "thumbnail": "https://img.youtube.com/vi/VIDEO_ID/mqdefault.jpg",
+    "video": "https://youtu.be/4QhM7KK-1ao",
+    "bestPercent": 1,
+    "verifiers": ["Noyan"],
+    "creators": ["Noyan", "Exence"]
   }
 ]
