@@ -196,14 +196,14 @@ export default {
 
             const list = [];
             if (this.useMainList) {
-                list.push(...fullListMapped.slice(0, 18));
+                list.push(...fullListMapped.slice(0, 19));
             }
             if (this.useExtendedList) {
-                list.push(...fullListMapped.slice(18));
+                list.push(...fullListMapped.slice(19));
             }
 
             // Random 100 levels
-            this.levels = shuffle(list).slice(0, 36);
+            this.levels = shuffle(list).slice(0, 38);
             this.showRemaining = false;
             this.givenUp = false;
             this.progression = [];
