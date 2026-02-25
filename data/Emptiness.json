@@ -17,14 +17,6 @@
             "hz": 60,
             "mobile": false,
             "enjoyment": 10
-        },
-        {
-            "user": "PiXEL",
-            "link": "https://www.youtube.com/shorts/n5F2C5_YbRo",
-            "percent": 100,
-            "hz": 240,
-            "mobile": false,
-            "enjoyment": 10
         }
     ]
 }
