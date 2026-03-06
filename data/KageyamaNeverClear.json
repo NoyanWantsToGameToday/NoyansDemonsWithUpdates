@@ -17,6 +17,14 @@
             "hz": 240,
             "mobile": false,
             "enjoyment": 7
+        },
+        {
+            "user": "Kageyama",
+            "link": "https://youtu.be/FBOsyrYSHGY?si=q8NB-2QJgw--M3Qz",
+            "percent": 100,
+            "hz": 60,
+            "mobile": false,
+            "enjoyment": 10
         }
     ]
 }
