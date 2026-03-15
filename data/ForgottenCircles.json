@@ -17,6 +17,14 @@
             "hz": 240,
             "mobile": false,
             "enjoyment": 9
+        },
+        {
+            "user": "Ejecge",
+            "link": "https://youtu.be/hR95l0qEJOw",
+            "percent": 100,
+            "hz": 480,
+            "mobile": false,
+            "enjoyment": 10
         }
     ]
 }
