@@ -15,6 +15,11 @@ export default {
                     New New Demon List
                 </a>
             </p>
+            <p>
+                <a href="https://www.youtube.com/watch?v=XIwDFcv0M3Y" rel="noopener">
+                    Funny fnf vid
+                </a>
+            </p>
         </div>
     `
 }
