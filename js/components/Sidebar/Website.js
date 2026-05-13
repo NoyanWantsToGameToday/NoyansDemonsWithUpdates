@@ -24,5 +24,10 @@ export default {
                 </a>
             </p>
         </div>
+        <div class="right-text">
+            <p>
+                172.30.240.1:27040 cs 1.6 server
+            </p>
+        </div>
     `
 }
