@@ -11,7 +11,7 @@ export default {
         <h3>Newer Demon List</h3>
         <div class="right-text">
             <p>
-                <a href="https://baby-out-orbit-ranger.trycloudflare.com" rel="noopener">
+                <a href="https://eau-acres-makers-wifi.trycloudflare.com" rel="noopener">
                     New New Demon List
                 </a>
             </p>
