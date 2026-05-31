@@ -11,7 +11,7 @@ export default {
         <h3>Newer Demon List</h3>
         <div class="right-text">
             <p>
-                <a href="https://rental-certificates-practical-array.trycloudflare.com" rel="noopener">
+                <a href="https://abstracts-ins-thumbnails-rank.trycloudflare.com" rel="noopener">
                     New New Demon List
                 </a>
             </p>
@@ -22,11 +22,6 @@ export default {
                 <a href="https://www.youtube.com/watch?v=XIwDFcv0M3Y" rel="noopener">
                     Funny fnf vid
                 </a>
-            </p>
-        </div>
-        <div class="right-text">
-            <p>
-                172.30.240.1:27040 cs 1.6 server
             </p>
         </div>
     `
