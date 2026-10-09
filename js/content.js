@@ -11,7 +11,7 @@ const dir = '/data';
 const benchmarker = '_';
 
 
-const RECORDS_API_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+const RECORDS_API_URL = "https://script.google.com/macros/s/AKfycbx0T6-iQDXq0juMsJ22GzSTBqi85ng-O1db0jNVWbFpgzV5YG2U2NQFsIvZCzOtjBFV/exec";
 
 function normalizeRecordName(value) {
     return String(value || "")
@@ -79,22 +79,22 @@ export async function fetchList() {
                     const levelResult = await fetch(
                         `${dir}/${path.startsWith(benchmarker) ? path.substring(1) : path}.json`,
                     );
-                                        
+
                     let level = await levelResult.json();
-                                    
+
                     level["path"] = path;
-                                    
+
                     // Merge approved Google Sheets submissions into this level.
                     if (!Array.isArray(level.records)) {
     level.records = [];
                     }
-                    
+
                     const approvedForLevel = approvedRecords.filter(
     (record) =>
         normalizeRecordName(record.level) ===
         normalizeRecordName(level.name)
                     );
-                    
+
                     for (const submission of approvedForLevel) {
                         const existingRecord = level.records.find(
                             (record) =>
@@ -113,7 +113,7 @@ export async function fetchList() {
                             flag: undefined,
                         });
                     }
-                    
+
 
                     try {
                         if (level.records) {
