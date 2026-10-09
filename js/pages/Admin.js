@@ -30,7 +30,7 @@ export default {
                         type="password"
                         autocomplete="current-password"
                         required
-                        style="display:block; width:100%; max-width:1000px; box-sizing:border-box; margin:0.5rem 0 1rem; padding:0.6rem;"
+                        style="display:block; width:100%; max-width:1000px; box-sizing:border-box; margin:1rem 0 1rem; padding:1.2rem;"
                     />
 
                     <button type="submit" :disabled="loading" style="color: #000;">
