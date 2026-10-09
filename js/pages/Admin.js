@@ -57,9 +57,9 @@ export default {
                 <article
                     style="
                     width: 100%;
+                    height: 100%;
                     max-width: 900px;
                     max-height: 600px;
-                    overflow-y: auto;
                     margin: 1rem 0;
                     border: 1px solid #ccc;
                     border-radius: 4px;
