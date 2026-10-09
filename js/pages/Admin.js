@@ -33,7 +33,7 @@ export default {
                         style="display:block; width:100%; max-width:350px; box-sizing:border-box; margin:0.5rem 0 1rem; padding:0.6rem;"
                     />
 
-                    <button type="submit" :disabled="loading">
+                    <button type="submit" :disabled="loading" style="color: #000;">
                         {{ loading ? "Logging in..." : "Log in" }}
                     </button>
                 </form>
@@ -41,11 +41,11 @@ export default {
 
             <section v-else>
                 <div style="display:flex; flex-wrap:wrap; gap:0.75rem; align-items:center; margin:1rem 0;">
-                    <button @click="loadRecords" :disabled="loading">
+                    <button @click="loadRecords" :disabled="loading" style="color: #000;">
                         {{ loading ? "Loading..." : "Refresh records" }}
                     </button>
 
-                    <button @click="logout">
+                    <button @click="logout" style="color: #000;">
                         Log out
                     </button>
                 </div>
@@ -68,6 +68,12 @@ export default {
                         {{ formatDate(record.submittedAt) }}
                     </p>
 
+                    
+                    <p>
+                        <strong>Status:</strong>
+                        {{ record.status }}
+                    </p>
+
                     <p v-if="record.video">
                         <strong>Video proof:</strong>
                         <a
@@ -83,6 +89,7 @@ export default {
                         <button
                             @click="review(record, 'Approved')"
                             :disabled="reviewingId !== null || loading"
+                            style="color: #000;"
                         >
                             {{ reviewingId === record.id ? "Processing..." : "Approve" }}
                         </button>
@@ -90,6 +97,7 @@ export default {
                         <button
                             @click="review(record, 'Rejected')"
                             :disabled="reviewingId !== null || loading"
+                            style="color: #000;"
                         >
                             Reject
                         </button>
