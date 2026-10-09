@@ -15,7 +15,7 @@ export default {
     },
 
     template: `
-        <main style="max-width: 900px; margin: 2rem auto; padding: 1.5rem;">
+        <main style="max-width: 1200px; margin: 2rem auto; padding: 1.5rem;">
             <h1>Admin — Record Submissions</h1>
 
             <section v-if="!authenticated">
