@@ -56,6 +56,12 @@
                 <router-link class="nav__tab" to="/future">
                     <span class="type-label-lg">Future</span>
                 </router-link>
+                <router-link class="nav__tab" to="/submit">
+                    <span class="type-label-lg">Submit Record</span>
+                </router-link>
+                <router-link class="nav__tab" to="/admin-submissions">
+                    <span class="type-label-lg">Admin</span>
+                </router-link>
                 <div class="nav__actions" v-if="store.list && store.loaded">
                      <div class="color-picker-wrapper nav__icon">
                         <img :src="store.dark ? '/assets/palette-dark.svg' : '/assets/palette.svg'"/>
@@ -64,12 +70,6 @@
                     <a class="nav__icon" href="https://discord.gg/4KwbZfN59A" target="_blank">
                         <img :src="!store.dark ? '/assets/discord-dark.svg' : '/assets/discord.svg'" />
                     </a>
-                    <a
-                        class="nav__cta type-label-lg"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLScuFx4o27dZxusyAqrTnlEz1ALuY-elL-kKQD3P-TpQjQG_4w/viewform?usp=dialog"
-                        target="_blank"
-                        >Submit Record</a
-                    >
                 </div>
             </nav>
         </header>
