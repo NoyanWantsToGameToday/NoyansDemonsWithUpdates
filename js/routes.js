@@ -28,8 +28,8 @@ export default [
     { path: "/packs/pack/:pack", component: Packs },
 
     { path: "/grind", component: Grind },
-    { path: "/future", component: FuturePage }
+    { path: "/future", component: FuturePage },
 
     { path: "/admin-submissions", component: AdminSubmissions },
-    { path: "/submit", component: SubmitRecord },
+    { path: "/submit", component: SubmitRecord }
 ];
