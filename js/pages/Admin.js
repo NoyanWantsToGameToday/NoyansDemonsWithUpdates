@@ -55,9 +55,14 @@ export default {
                 </p>
 
                 <article
+                    style="
+                    width: 100%;
+                    max-width: 900px;
+                    box-sizing: border-box;
+                    padding: 20px;
+                    "
                     v-for="record in records"
                     :key="record.id"
-                    style="border:1px solid #8886; border-radius:8px; padding:1rem; margin:1rem 0; overflow-wrap:anywhere;"
                 >
                     <h2 style="margin-top:0;">{{ record.level }}</h2>
 
