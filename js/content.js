@@ -11,8 +11,43 @@ const dir = '/data';
 const benchmarker = '_';
 
 
+const RECORDS_API_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+
+function normalizeRecordName(value) {
+    return String(value || "")
+        .trim()
+        .replace(/\s+/g, " ")
+        .toLowerCase();
+}
+
+async function fetchApprovedRecords() {
+    try {
+        const response = await fetch(RECORDS_API_URL, {
+            method: "POST",
+            body: JSON.stringify({ action: "publicApproved" }),
+        });
+
+        if (!response.ok) {
+            throw new Error(`API returned HTTP ${response.status}`);
+        }
+
+        const result = await response.json();
+
+        if (!result.ok || !Array.isArray(result.records)) {
+            throw new Error(result.error || "Invalid API response");
+        }
+
+        return result.records;
+    } catch (error) {
+        console.error("Failed to fetch approved submissions:", error);
+        return [];
+    }
+}
+
 
 export async function fetchList() {
+    const approvedRecords = await fetchApprovedRecords();
+
     const listResult = await fetch(`${dir}/_list.json`);
     const packResult = await fetch(`${dir}/_packs.json`);
     const flagResult = await fetch(`${dir}/_flags.json`);
@@ -44,9 +79,41 @@ export async function fetchList() {
                     const levelResult = await fetch(
                         `${dir}/${path.startsWith(benchmarker) ? path.substring(1) : path}.json`,
                     );
-                    let level = await levelResult.json(); // no longer a constant so we can wrap in the path
-
+                                        
+                    let level = await levelResult.json();
+                                    
                     level["path"] = path;
+                                    
+                    // Merge approved Google Sheets submissions into this level.
+                    if (!Array.isArray(level.records)) {
+    level.records = [];
+                    }
+                    
+                    const approvedForLevel = approvedRecords.filter(
+    (record) =>
+        normalizeRecordName(record.level) ===
+        normalizeRecordName(level.name)
+                    );
+                    
+                    for (const submission of approvedForLevel) {
+                        const existingRecord = level.records.find(
+                            (record) =>
+                                normalizeRecordName(record.user) ===
+                                normalizeRecordName(submission.player)
+                        );
+                    
+                        // Don't duplicate a player already listed in the GitHub data.
+                        if (existingRecord) continue;
+                    
+                        level.records.push({
+                            user: submission.player,
+                            percent: Number(submission.progress),
+                            link: submission.video || "",
+                            mobile: false,
+                            flag: undefined,
+                        });
+                    }
+                    
 
                     try {
                         if (level.records) {
