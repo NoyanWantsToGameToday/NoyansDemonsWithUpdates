@@ -7,6 +7,7 @@ import ChallengeLeaderboard from './Archived/ChallengeLeaderboard.js';
 import Grind from './pages/Grind.js'
 import FuturePage from './pages/Future.js';
 import SubmitRecord from './pages/SubmitRecord.js';
+import AdminSubmissions from './pages/AdminSubmissions.js';
 
 export default [
     // Sets the browser link to access each page
@@ -28,6 +29,7 @@ export default [
 
     { path: "/grind", component: Grind },
     { path: "/future", component: FuturePage },
+    { path: "/admin-submissions", component: AdminSubmissions },
 
     { path: "/submit", component: SubmitRecord }
 ];
