@@ -7,7 +7,7 @@ import ChallengeLeaderboard from './Archived/ChallengeLeaderboard.js';
 import Grind from './pages/Grind.js'
 import FuturePage from './pages/Future.js';
 import SubmitRecord from './pages/SubmitRecord.js';
-import AdminSubmissions from './pages/AdminSubmissions.js';
+import AdminSubmissions from './pages/Admin.js';
 
 export default [
     // Sets the browser link to access each page
